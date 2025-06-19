@@ -12,29 +12,34 @@ int main() {
     Mover 5 casas na diagonal para cima e a direita 
     */ 
     printf("\nMovimento Bispo.\n\n");
+    int fora, dentro;
+    char letra;
 
-    int bispo = 0;
-
-    do
+    for (fora = 1; fora <= 5; fora++)
     {
-        // andar 5 casas na diagol direita
-        printf("Cima, direita.\n");
-        bispo++;
+        for (dentro = 1; dentro <= 5; dentro++)
+        {
+            printf("%d", fora);
 
-    } while (bispo < 5);
+        }
+        
+        printf("\n");
+    }
+    
     
     /*
     Implementação de Movimentação da Torre
     Mover 5 casas para a direita
     */
-    printf("\nMovimento Torre.\n\n");
+    printf("\n\nMovimento Torre.\n");
 
-    int torre = 0;
+    int torre = 1;
 
-    while (torre < 5)
+    while (torre <= 5)
     {   
         // andar 5 casas para a direita
-        printf("Direita.\n");
+        // Inico 1 - fim 5.
+        printf("[%d]", torre);
 
         torre++;
     }
@@ -44,19 +49,33 @@ int main() {
     Implementação de Movimentação da Rainha
     Mover oito casas para a esquerda
     */ 
-    printf("\nMovimento Rainha.\n\n");
+    printf("\n\nMovimento Rainha.\n");
 
-    for (int rainha = 0; rainha < 8; rainha++)
+    for (int rainha = 8; rainha >= 1; rainha--)
     {   
         // andar 8 casas para a direita
-        printf("Esquerda.\n");
+        //inicio 1 - fim 8.
+        printf("[%d]", rainha);
     }
-    
-    
 
     // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+
+    printf("\n\nMovimento Cavalo.\n");
+    int i, j;
+
+    for ( i = 1; i < 2; i++)
+    {
+        j = 1;
+        while (j <= 2)
+        {
+            printf("Cima.\n");
+            j++;
+        }
+        
+        printf("Direita.\n");
+    }
+    
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
