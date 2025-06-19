@@ -17,6 +17,7 @@ int main() {
 
     do
     {
+        // andar 5 casas na diagol direita
         printf("Cima, direita.\n");
         bispo++;
 
@@ -31,7 +32,8 @@ int main() {
     int torre = 0;
 
     while (torre < 5)
-    {
+    {   
+        // andar 5 casas para a direita
         printf("Direita.\n");
 
         torre++;
@@ -45,7 +47,8 @@ int main() {
     printf("\nMovimento Rainha.\n\n");
 
     for (int rainha = 0; rainha < 8; rainha++)
-    {
+    {   
+        // andar 8 casas para a direita
         printf("Esquerda.\n");
     }
     
