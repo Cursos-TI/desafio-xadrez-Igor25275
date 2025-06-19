@@ -12,18 +12,17 @@ int main() {
     Mover 5 casas na diagonal para cima e a direita 
     */ 
     printf("\nMovimento Bispo.\n\n");
-    int fora, dentro;
-    char letra;
-
-    for (fora = 1; fora <= 5; fora++)
-    {
-        for (dentro = 1; dentro <= 5; dentro++)
+    
+    // Bispo vai andar 5 casas na diagonal para a direita: 
+    // inicio 1 - fim 5.
+    for(int fora = 5; fora >= 1; fora--)
+    {   
+        for(int dentro = 1; dentro <= fora; dentro++)
         {
-            printf("%d", fora);
-
+            printf("   ");
         }
-        
-        printf("\n");
+
+        printf("[%d]\n", fora);
     }
     
     
@@ -51,31 +50,41 @@ int main() {
     */ 
     printf("\n\nMovimento Rainha.\n");
 
-    for (int rainha = 8; rainha >= 1; rainha--)
+    int rainha = 8;
+    do
     {   
         // andar 8 casas para a direita
         //inicio 1 - fim 8.
         printf("[%d]", rainha);
-    }
+        rainha--;
+    } while (rainha >= 1);
+    
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Um loop pode representar a movimentação horizontal e outro vertical.
 
     printf("\n\nMovimento Cavalo.\n");
-    int i, j;
+    
+    // variavel cavalo para andar no 1 ao 3 e variavel 'l' para andar no numero 4 para a direita
+    int cavalo = 3, l = 4;
 
-    for ( i = 1; i < 2; i++)
+    while (cavalo >= 1)
     {
-        j = 1;
-        while (j <= 2)
+        printf("[%d]", cavalo);
+
+        while (l == 4)
         {
-            printf("Cima.\n");
-            j++;
+            printf("[%d]", cavalo + 1);
+            // variavel para tornar a sentença falça e repetir o loop apenas 1 vez
+            l = 1;
         }
         
-        printf("Direita.\n");
+        printf("\n");
+        cavalo--;
+
     }
     
+    printf("------------------\n");
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
