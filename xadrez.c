@@ -4,6 +4,29 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+void movimentoTorre(int numero){
+    // Irá se mover 'numero' vezes para a direita
+    
+    if (numero > 0)
+    {
+        
+        movimentoTorre(numero - 1);
+        printf("[%d]", numero);
+    }
+    
+}
+
+void movimentoRainha(int num){
+    // Irá se mover 'numero' vezes para a esquerda
+    if (num > 0)
+    {
+        printf("[%d]", num);
+        movimentoRainha(num - 1);
+    }   
+    
+}
+
+
 int main() {
     // Nível Novato - Movimentação das Peças
 
@@ -32,16 +55,12 @@ int main() {
     */
     printf("\n\nMovimento Torre.\n");
 
-    int torre = 1;
+    int quantidadeTorre;
 
-    while (torre <= 5)
-    {   
-        // andar 5 casas para a direita
-        // Inico 1 - fim 5.
-        printf("[%d]", torre);
+    printf("Quantas casas deseja mover a torre para a direita? ");
+    scanf("%d", &quantidadeTorre);
 
-        torre++;
-    }
+    movimentoTorre(quantidadeTorre);
     
 
     /*
@@ -50,15 +69,12 @@ int main() {
     */ 
     printf("\n\nMovimento Rainha.\n");
 
-    int rainha = 8;
-    do
-    {   
-        // andar 8 casas para a direita
-        //inicio 1 - fim 8.
-        printf("[%d]", rainha);
-        rainha--;
-    } while (rainha >= 1);
-    
+    int quantidadeRainha;
+
+    printf("Quantas casas deseja mover a rainha para a esquerda? ");
+    scanf("%d", &quantidadeRainha);
+
+    movimentoRainha(quantidadeRainha);
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Um loop pode representar a movimentação horizontal e outro vertical.
